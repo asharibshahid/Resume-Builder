@@ -1,0 +1,160 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft gradient background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background-color: #1d4169; /* Updated darker color for header */
+    color: #fff;
+    padding: 1rem 2rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.nav h1 {
+    font-size: 1.8rem;
+}
+
+.login-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: white;
+    color: #1d4169;
+}
+
+.main {
+    min-height: 100vh;
+    padding-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.1) ; /* Added white transparency for contrast */
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.text-sec {
+    width: 50%;
+}
+
+.text-sec h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.text-sec p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.start-btn {
+    background-color: #1d4169;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #2f629c;
+}
+
+.video-div {
+    width: 50%;
+}
+
+.video {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.footer {
+    background: linear-gradient(135deg, rgba(29, 65, 105, 1), rgba(47, 98, 156, 1));
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.footer h5 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    opacity: 0.8;
+}
+
+.footer-content p:hover {
+    opacity: 1;
+}
+
+.footer-content h5, .footer-content p {
+    transition: opacity 0.3s ease;
+}
+
+
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-sec, .video-div {
+        width: 100%;
+    }
+
+    .text-sec h1 {
+        font-size: 2.4rem;
+    }
+
+    .start-btn {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Create Your Professional Resume</title>
+</head>
+<body>
+  <!-- Form Section -->
+  <section class="form-section">
+    <h1 class="form-h1">Complete Your Resume Details</h1>
+    <form id="resumeForm" action="resume.html" method="get">
+      <!-- General Information -->
+      <div class="data">
+        <h2 class="section-title">General Information</h2>
+        <div class="data-container">
+          <div class="input-div">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter Your Full Name" />
+          </div>
+          <div class="input-div">
+            <label for="role">Professional Role:</label>
+            <input type="text" id="role" name="role" placeholder="e.g. Front-End Developer" />
+          </div>
+          <div class="input-div">
+            <label for="profilePicture">Profile Picture:</label>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*" />
+          </div>
+        </div>
+        <div class="data-container">
+          <div class="input-div">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter Your Email" />
+          </div>
+          <div class="input-div">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter Your Phone Number" />
+          </div>
+          <div class="input-div">
+            <label for="address">Home Address:</label>
+            <input type="text" id="address" name="address" required placeholder="Enter Your Address" />
+          </div>
+        </div>
+        <div class="data-container">
+          <div class="input-div">
+            <label for="profile">Profile Summary:</label>
+            <textarea id="profile" name="profile" rows="5" placeholder="Briefly introduce yourself"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="data">
+        <h2 class="section-title">Education</h2>
+        <div class="data-container">
+          <div class="input-div">
+            <label for="college">College/University:</label>
+            <input type="text" id="college" name="college" required placeholder="Enter Your Institution" />
+          </div>
+          <div class="input-div">
+            <label for="group">Field of Study:</label>
+            <input type="text" id="group" name="group" required placeholder="e.g. Computer Science" />
+          </div>
+        </div>
+        <div class="data-container">
+          <div class="input-div">
+            <label for="startYear">Start Year:</label>
+            <input type="number" id="startYear" name="startYear" required />
+          </div>
+          <div class="input-div">
+            <label for="endYear">End Year:</label>
+            <input type="number" id="endYear" name="endYear" required />
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="data">
+        <h2 class="section-title">Skills</h2>
+        <div class="data-container">
+          <div class="input-div">
+            <label for="skills">List Your Skills:</label>
+            <input type="text" id="skills" name="skills" required placeholder="e.g. JavaScript, React" />
+          </div>
+          <div class="input-div">
+            <label for="skillLevel">Proficiency Level (1-100):</label>
+            <input type="number" id="skillLevel" name="skillLevel" min="1" max="100" required placeholder="Enter Your Skill Level" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="data">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="data-container">
+          <div class="input-div">
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" placeholder="Optional" />
+          </div>
+          <div class="input-div">
+            <label for="workYear">Work Year:</label>
+            <input type="text" id="workYear" name="workYear" placeholder="Optional" />
+          </div>
+        </div>
+        <div class="data-container">
+          <div class="input-div">
+            <label for="roleTitle">Role Title:</label>
+            <input type="text" id="roleTitle" name="roleTitle" placeholder="Optional" />
+          </div>
+          <div class="input-div">
+            <label for="description">Job Description:</label>
+            <textarea id="description" name="description" rows="5" placeholder="Optional"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- Languages -->
+      <div class="data">
+        <h2 class="section-title">Languages</h2>
+        <div class="data-container">
+          <div class="input-div">
+            <label for="languages">Languages Spoken:</label>
+            <input type="text" id="languages" name="languages" required placeholder="e.g. English, Spanish" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="sub-div">
+        <input type="submit" value="Generate Resume" class="submit-btn" />
+      </div>
+    </form>
+  </section>
+
+  <!-- Resume Preview Section -->
+  <main class="resume-section">
+    <div class="btn">
+      <button id="downloadBtn">Download Resume</button>
+    </div>
+    <div class="resume">
+      <div class="resume-container">
+        <!-- Left Side -->
+        <div class="left-side">
+          <!-- Profile Section -->
+          <div class="profile-info">
+            <div class="profile">
+              <img id="displayProfileImage" src="" alt="Profile Picture" style="display: none;" />
+            </div>
+            <h2 id="displayName" contenteditable="true">Your Name</h2>
+            <h4 id="displayRole" contenteditable="true">Your Role</h4>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="contact-info">
+            <h3>Contact</h3>
+            <p id="displayPhone" contenteditable="true">Phone</p>
+            <p id="displayEmail" contenteditable="true">Email</p>
+            <p id="displayAddress" contenteditable="true">Address</p>
+          </div>
+
+          <!-- Education -->
+          <div class="education-info">
+            <h3>Education</h3>
+            <p id="displayCollege" contenteditable="true">Institution</p>
+            <p id="displayGroup" contenteditable="true">Field</p>
+            <p id="displayStartYear" contenteditable="true">Start Year</p>
+            <p id="displayEndYear" contenteditable="true">End Year</p>
+          </div>
+
+         
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-side">
+          <div class="about-profile">
+            <h3>Profile</h3>
+            <p id="displayProfile" contenteditable="true">Your bio here.</p>
+          </div>
+          <br>
+          <div class="work-experience">
+            <h3>Work Experience</h3>
+            <h4 id="displayCompany" contenteditable="true">Company Name</h4>
+            <p id="displayWorkYear" contenteditable="true">Work Year</p>
+            <p id="displayRoleTitle" contenteditable="true">Role Title</p>
+            <p id="displayWorkDescription" contenteditable="true">Work description</p>
+          </div>
+ <!-- Skills Section -->
+  
+ <div  class="skills-info">
+  <h3>Skills</h3>
+  <ul id="displaySkills"></ul>
+</div>
+
+          <!-- Languages -->
+          <div class="languages">
+            <h3>Languages</h3>
+            <ul id="displayLanguages"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="builder.js"></script>
+</body>
+</html>

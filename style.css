@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #96b3d0, #ffffff);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+}
+
+.resume-section {
+  padding: 20px;
+  background-color: #c9c4c4;
+  max-width: 900px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.resume-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  background: #c6c3c3;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.left-side, .right-side {
+  padding: 40px;
+}
+
+.left-side {
+  width: 30%;
+  background: linear-gradient(180deg, #5e72e4, #825ee4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.right-side {
+  width: 70%;
+  background: linear-gradient(180deg, #6a8dff, #a1c4fd);
+  padding: 50px;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.profile-info {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.profile-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.profile-info h4 {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #e2e8f0;
+}
+
+.contact-info, .education-info, .skills-info {
+  margin-top: 40px;
+}
+
+.contact-info h3, .education-info h3, .skills-info h3 {
+  font-size: 18px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+
+.contact-info p, .education-info p, .skills-info li {
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.num, .gmail, .address {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info i {
+  font-size: 16px;
+  color: #f0f4f8;
+}
+
+.skills-info ul {
+  list-style-type: none;
+  padding-left: 18px;
+}
+
+.skills-info li {
+  padding: 6px 0;
+}
+
+.right-side h3, .about-profile h1, .work-experience h1, .languages h1 {
+  font-size: 18px;
+  color: #3c3c3c;
+  margin-bottom: 15px;
+}
+
+.about-profile p, .work-experience p, .languages li {
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.company-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.role h5 {
+  padding-top: 10px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.languages ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+#downloadBtn {
+  background-color: #5e72e4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#downloadBtn:hover {
+  background-color: #4a60cc;
+}
+
+.form-h1 {
+  text-align: center;
+  background-color: #5e72e4;
+  color: white;
+  padding: 15px 0;
+  border-radius: 8px;
+}
+
+.form-section {
+  margin-top: 40px;
+}
+
+.data {
+  margin: 60px auto;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 90%;
+}
+
+.data h1 {
+  padding: 10px 15px;
+
+  background: linear-gradient(180deg, #5e72e4, #825ee4);
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.data-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.input-div {
+  width: 100%;
+  flex: 1;
+}
+
+.input-div input, .input-div textarea {
+  padding: 10px;
+  border: 1px solid #322727;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+.input-div input:focus, .input-div textarea:focus {
+  border-color: #5e72e4;
+  outline: none;
+}
+
+.input-div label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #5e72e4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #4a60cc;
+}
+
+.sub-div {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1000px) {
+  .data-container {
+    flex-direction: column;
+  }
+  .resume-container {
+    flex-direction: column;
+  }
+  .left-side, .right-side {
+    width: 100%;
+    padding: 20px;
+  }
+  #downloadBtn {
+    margin-left: 45px;
+    margin-bottom: 35px;
+  }
+}
